@@ -2,16 +2,9 @@ const test = [1, 2, 5];
 const test2 = ["apple", "banana", "cheese"];
 
 function ziplist(arr1, arr2) {
-  let remix = "";
-  let q = 0;
-  let t = 0;
-  for (let i in arr1) {
-    remix += arr1[t];
-    remix += ' ';
-    remix += arr2[q];
-    remix += ' ';
-    q++;
-    t++;
+  let remix = [];
+  for (let i = 0; i < arr2.length; i++) {
+    remix.push(arr1[i], arr2[i]);
   }
   return remix;
 }
